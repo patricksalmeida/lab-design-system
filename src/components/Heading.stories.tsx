@@ -1,11 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react' 
-import { Text, TextProps } from './Text' 
+import { Heading, HeadingProps } from './Heading' 
 
 export default {
-    title: 'Components/Text',
-    component: Text,
+    title: 'Components/Heading',
+    component: Heading,
     args: {
-        children: 'Text'
+        children: 'Heading'
     },
     argTypes: {
         size: {
@@ -13,31 +13,31 @@ export default {
             options: ['sm', 'md', 'lg']
         }
     }
-} as Meta<TextProps>
+} as Meta<HeadingProps>
 
-export const Default: StoryObj<TextProps> = {
+export const Default: StoryObj<HeadingProps> = {
     args: {
         size: 'md'
     }
 }
 
-export const Small: StoryObj<TextProps> = {
+export const Small: StoryObj<HeadingProps> = {
     args: {
         size: 'sm'
     }
 }
 
-export const Large: StoryObj<TextProps> = {
+export const Large: StoryObj<HeadingProps> = {
     args: {
         size: 'lg'
     }
 }
 
-export const Custom: StoryObj<TextProps> = {
+export const Custom: StoryObj<HeadingProps> = {
     args: {
         asChild: true,
         children: (
-            <p>Text with P tag</p>
+            <h1>Heading with H1</h1>
         )
     },
     argTypes: {
