@@ -1,3 +1,5 @@
+const { config } = require("@storybook/addon-actions")
+
 module.exports = {
   "stories": [
     "../src/**/*.stories.mdx",
@@ -14,5 +16,13 @@ module.exports = {
   },
   "features": {
     "storyStoreV7": true
+  },
+  viteFinal: (confi, { configType}) => {
+    /* essa config foi adicionada para que o storybook funcione dentro do Gh Pages */
+    if (configType === 'PRODUCTION') {
+      config.base = '/lab-design-system/' // Aqui deve vir o nome exato do repo
+    }
+
+    return config
   }
 }
