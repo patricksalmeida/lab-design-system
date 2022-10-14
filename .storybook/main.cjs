@@ -17,7 +17,7 @@ module.exports = {
   "features": {
     "storyStoreV7": true
   },
-  viteFinal: (confi, { configType}) => {
+  viteFinal: (config, { configType}) => {
     /* essa config foi adicionada para que o storybook funcione dentro do Gh Pages */
     if (configType === 'PRODUCTION') {
       config.base = '/lab-design-system/' // Aqui deve vir o nome exato do repo
