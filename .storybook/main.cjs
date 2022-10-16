@@ -17,7 +17,10 @@ module.exports = {
   },
   "features": {
     "storyStoreV7": true,
-    "interactionsDebugger": true
+    "interactionsDebugger": true,
+    "staticDirs": [
+      "../public"
+    ]
   },
   viteFinal: (config, { configType}) => {
     /* essa config foi adicionada para que o storybook funcione dentro do Gh Pages */
