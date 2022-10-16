@@ -16,7 +16,8 @@ module.exports = {
     "builder": "@storybook/builder-vite"
   },
   "features": {
-    "storyStoreV7": true
+    "storyStoreV7": true,
+    "interactionsDebugger": true
   },
   viteFinal: (config, { configType}) => {
     /* essa config foi adicionada para que o storybook funcione dentro do Gh Pages */
